@@ -11,7 +11,9 @@
         <li> {{book.author}} </li>
         <li> {{book.year}} </li>
         <li> {{book.created_at}} </li>
+        <li> {{book.updated_at}} </li>
     </ul>
+    <a href="{% url 'update' book.id %}">Update the book</a>
     <a href="{% url 'all' %}"> <- home page </a>
 </body>
 </html>

@@ -1,0 +1,9 @@
+<h2> Update book - {{book.title}} </h2>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="book_title"><br>
+    <input type="text" name="book_author"><br>
+    <input type="text" name="book_year"><br>
+    <button type="submit">Update</button>
+</form>

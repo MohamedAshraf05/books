@@ -6,10 +6,21 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Add new Book</h1>
+    <form action="{% url 'new' %}" method="post">
+        {% csrf_token %}
+        <label for="title"> Title </label>
+        <input type="text" name="book_title" placeholder="Enter the title of the book" id=""><br>
+        <input type="text" name="book_author" placeholder="Enter the author name" id=""><br>
+        <input type="text" name="book_year" placeholder="Enter the publish year" id=""><br>
+        <button type="submit">Add new book</button>
+    </form>
+    <hr>
     <h1>All books</h1>
     {% for book in books %}
         <h1> {{book.title}} </h1>
         <a href="{% url 'detail' book.id %}">View Detail</a>
+        <a href="{% url 'update' book.id %}">Update the book</a>
         <form action="{% url 'delete' book.id %}" method="post">
             {% csrf_token %}
             <button type="submit">Delete</button>
