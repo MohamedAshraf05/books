@@ -10,9 +10,9 @@
     <form action="{% url 'new' %}" method="post">
         {% csrf_token %}
         <label for="title"> Title </label>
-        <input type="text" name="book_title" placeholder="Enter the title of the book" id=""><br>
-        <input type="text" name="book_author" placeholder="Enter the author name" id=""><br>
-        <input type="text" name="book_year" placeholder="Enter the publish year" id=""><br>
+        <input type="text" name="title" placeholder="Enter the title of the book" id=""><br>
+        <input type="text" name="author" placeholder="Enter the author name" id=""><br>
+        <input type="text" name="year" placeholder="Enter the publish year" id=""><br>
         <button type="submit">Add new book</button>
     </form>
     <hr>
